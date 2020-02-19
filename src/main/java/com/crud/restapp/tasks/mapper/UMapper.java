@@ -21,7 +21,8 @@ public interface UMapper {
     UserDto mapToUserDto(User user);
 
     @Mappings({
-            @Mapping(source = "tasksDto", target = "tasks")})
+            @Mapping(source = "tasksDto", target = "tasks"),
+            @Mapping(ignore = true, target = "authorities")})
     User mapToUser(UserDto userDto);
 
     @Mappings({@Mapping(ignore = true, target = "user")})

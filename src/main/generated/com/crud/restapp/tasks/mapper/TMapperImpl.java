@@ -10,7 +10,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-02-18T18:42:15+0100",
+    date = "2020-02-19T20:10:21+0100",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 11.0.2 (Oracle Corporation)"
 )
 public class TMapperImpl implements TMapper {
@@ -59,10 +59,10 @@ public class TMapperImpl implements TMapper {
 
         User user = new User();
 
-        user.setId( userDto.getId() );
-        user.setUsername( userDto.getUsername() );
         user.setPassword( userDto.getPassword() );
         user.setRole( userDto.getRole() );
+        user.setId( userDto.getId() );
+        user.setUsername( userDto.getUsername() );
 
         return user;
     }

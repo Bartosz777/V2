@@ -22,7 +22,8 @@ public interface TMapper {
     Task mapToTask(TaskDto taskDto);
 
     @Mappings({
-            @Mapping(ignore = true, target = "tasks")})
+            @Mapping(ignore = true, target = "tasks"),
+            @Mapping(ignore = true, target = "authorities")})
     User mapToUser(UserDto userDto);
 
     @Mappings({
