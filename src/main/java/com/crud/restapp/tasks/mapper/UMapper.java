@@ -17,16 +17,11 @@ public interface UMapper {
 
     @Mappings({
             @Mapping(source = "tasks", target = "tasksDto"),
-            @Mapping(source = "username", target = "username"),
-            @Mapping(ignore = true, target = "password"),
-            @Mapping(source = "role", target = "role")})
+            @Mapping(ignore = true, target = "password")})
     UserDto mapToUserDto(User user);
 
     @Mappings({
-            @Mapping(source = "tasksDto", target = "tasks"),
-            @Mapping(source = "username", target = "username"),
-            @Mapping(source = "password", target = "password"),
-            @Mapping(source = "role", target = "role")})
+            @Mapping(source = "tasksDto", target = "tasks")})
     User mapToUser(UserDto userDto);
 
     @Mappings({@Mapping(ignore = true, target = "user")})

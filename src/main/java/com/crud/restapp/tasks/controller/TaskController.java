@@ -4,6 +4,7 @@ import com.crud.restapp.tasks.domain.TaskDto;
 import com.crud.restapp.tasks.mapper.TaskMapper;
 import com.crud.restapp.tasks.service.DbService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

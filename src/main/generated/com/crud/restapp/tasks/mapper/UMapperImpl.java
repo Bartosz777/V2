@@ -10,7 +10,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-01-18T20:20:48+0100",
+    date = "2020-02-18T18:42:15+0100",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 11.0.2 (Oracle Corporation)"
 )
 public class UMapperImpl implements UMapper {
@@ -24,9 +24,9 @@ public class UMapperImpl implements UMapper {
         UserDto userDto = new UserDto();
 
         userDto.setTasksDto( taskListToTaskDtoList( user.getTasks() ) );
-        userDto.setRole( user.getRole() );
-        userDto.setUsername( user.getUsername() );
         userDto.setId( user.getId() );
+        userDto.setUsername( user.getUsername() );
+        userDto.setRole( user.getRole() );
 
         return userDto;
     }
@@ -39,11 +39,11 @@ public class UMapperImpl implements UMapper {
 
         User user = new User();
 
+        user.setTasks( taskDtoListToTaskList( userDto.getTasksDto() ) );
+        user.setId( userDto.getId() );
+        user.setUsername( userDto.getUsername() );
         user.setPassword( userDto.getPassword() );
         user.setRole( userDto.getRole() );
-        user.setTasks( taskDtoListToTaskList( userDto.getTasksDto() ) );
-        user.setUsername( userDto.getUsername() );
-        user.setId( userDto.getId() );
 
         return user;
     }
@@ -60,6 +60,7 @@ public class UMapperImpl implements UMapper {
         task.setTitle( taskDto.getTitle() );
         task.setContent( taskDto.getContent() );
         task.setStartDate( taskDto.getStartDate() );
+        task.setEndDate( taskDto.getEndDate() );
 
         return task;
     }
@@ -76,6 +77,7 @@ public class UMapperImpl implements UMapper {
         taskDto.setTitle( task.getTitle() );
         taskDto.setContent( task.getContent() );
         taskDto.setStartDate( task.getStartDate() );
+        taskDto.setEndDate( task.getEndDate() );
 
         return taskDto;
     }

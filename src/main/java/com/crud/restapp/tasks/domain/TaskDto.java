@@ -36,4 +36,9 @@ public class TaskDto {
     @JsonProperty("startDate")
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate startDate;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @JsonProperty("endDate")
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate endDate;
 }
